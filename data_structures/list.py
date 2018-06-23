@@ -1,6 +1,8 @@
 
 #Data Structures in Python
 
+import random
+
 def simple_list_iteration():
     '''
     List iteration
@@ -34,7 +36,24 @@ def create_list():
     for k in range(len(C)):
         D[k].append
 
+def copy_list():
+    '''
+    Copy List
+    :return:
+    '''
+    list_size = 10
+
+    A = [0]*list_size
+    B = [0]*list_size
+
+    for i in range(list_size):
+        A[i] = random.randint(1,101) #generate random values of numbers between 1 and 100
+    for i in range(list_size):
+        B[i] = A[i]    #Assign the same values from List A to List B
+
+    print(A,B)
 
 
 
-create_list()
+
+copy_list()
